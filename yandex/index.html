@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YANDEX入口首页 - 俄罗斯搜索引擎导航与实用功能指南</title>
+<meta name="description" content="YANDEX入口首页导航，了解俄罗斯主流搜索引擎Yandex的搜索、地图、翻译、邮箱、图片与新闻等常用服务入口，以及访问方式、功能说明和常见问题解答。">
+<meta name="keywords" content="YANDEX入口首页,Yandex搜索,Yandex入口,俄罗斯搜索引擎,Yandex导航,Yandex服务">
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+<style>
+:root{
+  --ya-red:#fc3f1d;
+  --ya-red-dark:#d92c0c;
+  --ya-black:#1a1a1a;
+  --ya-gray:#5c5c5c;
+  --ya-line:#e6e6e6;
+  --ya-bg:#f6f7f9;
+  --ya-white:#ffffff;
+  --ya-blue:#0b6efd;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:"PingFang SC","Microsoft YaHei","Helvetica Neue",Arial,sans-serif;
+  background:var(--ya-bg);
+  color:var(--ya-black);
+  line-height:1.7;
+  font-size:15px;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none;}
+img{max-width:100%;display:block;}
+.wrap{
+  width:100%;
+  max-width:1180px;
+  margin:0 auto;
+  padding:0 20px;
+}
+
+/* ============ 顶部导航 ============ */
+.topbar{
+  background:var(--ya-white);
+  border-bottom:1px solid var(--ya-line);
+  position:sticky;
+  top:0;
+  z-index:50;
+}
+.topbar-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  height:64px;
+  gap:18px;
+}
+.brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-weight:700;
+  font-size:19px;
+  letter-spacing:.3px;
+  white-space:nowrap;
+}
+.brand-mark{
+  width:32px;height:32px;
+  border-radius:8px;
+  background:linear-gradient(135deg,var(--ya-red),#ff8a3d);
+  color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  font-size:17px;font-weight:800;
+}
+.brand small{
+  display:block;
+  font-size:11px;
+  font-weight:400;
+  color:var(--ya-gray);
+  letter-spacing:0;
+}
+.nav{
+  display:flex;
+  align-items:center;
+  gap:6px;
+  flex-wrap:wrap;
+}
+.nav a{
+  padding:8px 13px;
+  border-radius:8px;
+  font-size:14px;
+  color:#333;
+  transition:.18s;
+}
+.nav a:hover{
+  background:#fdf0ec;
+  color:var(--ya-red-dark);
+}
+
+/* ============ 首屏搜索区 ============ */
+.hero{
+  background:linear-gradient(160deg,#ffffff 0%,#fff5f1 55%,#ffe9e0 100%);
+  border-bottom:1px solid var(--ya-line);
+  padding:56px 0 48px;
+}
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  gap:44px;
+  align-items:center;
+}
+.hero h1{
+  font-size:34px;
+  line-height:1.35;
+  letter-spacing:-.5px;
+  margin-bottom:16px;
+}
+.hero h1 em{
+  font-style:normal;
+  color:var(--ya-red);
+}
+.hero p.lead{
+  color:#444;
+  font-size:15.5px;
+  max-width:560px;
+  margin-bottom:26px;
+}
+.search-box{
+  display:flex;
+  background:#fff;
+  border:2px solid var(--ya-red);
+  border-radius:12px;
+  overflow:hidden;
+  max-width:560px;
+  box-shadow:0 8px 24px rgba(252,63,29,.12);
+}
+.search-box input{
+  flex:1;
+  border:0;
+  outline:0;
+  padding:14px 16px;
+  font-size:15px;
+  color:#222;
+  background:transparent;
+}
+.search-box button{
+  border:0;
+  background:var(--ya-red);
+  color:#fff;
+  padding:0 26px;
+  font-size:15px;
+  font-weight:600;
+  cursor:pointer;
+  transition:.18s;
+}
+.search-box button:hover{background:var(--ya-red-dark);}
+.search-tips{
+  margin-top:14px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+}
+.search-tips span{
+  font-size:12.5px;
+  color:var(--ya-gray);
+  background:#fff;
+  border:1px solid var(--ya-line);
+  border-radius:999px;
+  padding:4px 12px;
+}
+.hero-panel{
+  background:#fff;
+  border:1px solid var(--ya-line);
+  border-radius:16px;
+  padding:22px;
+  box-shadow:0 10px 30px rgba(0,0,0,.05);
+}
+.hero-panel h2{
+  font-size:15px;
+  margin-bottom:14px;
+  color:var(--ya-black);
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+.hero-panel h2::before{
+  content:"";
+  width:4px;height:15px;
+  background:var(--ya-red);
+  border-radius:2px;
+}
+.quick-list{
+  list-style:none;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:9px;
+}
+.quick-list a{
+  display:flex;
+  align-items:center;
+  gap:9px;
+  padding:10px 11px;
+  border-radius:10px;
+  background:#fafafa;
+  border:1px solid #f0f0f0;
+  font-size:13.5px;
+  transition:.18s;
+}
+.quick-list a:hover{
+  background:#fff3ee;
+  border-color:#ffd4c6;
+  transform:translateY(-1px);
+}
+.dot{
+  width:22px;height:22px;
+  border-radius:6px;
+  background:#ffe3d9;
+  color:var(--ya-red-dark);
+  font-size:12px;
+  font-weight:700;
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;
+}
+
+/* ============ 通用区块 ============ */
+.section{padding:52px 0;}
+.section-head{
+  margin-bottom:28px;
+}
+.section-head h2{
+  font-size:23px;
+  letter-spacing:-.3px;
+  margin-bottom:8px;
+}
+.section-head p{
+  color:var(--ya-gray);
+  font-size:14px;
+  max-width:760px;
+}
+.section.alt{background:#fff;border-top:1px solid var(--ya-line);border-bottom:1px solid var(--ya-line);}
+
+/* ============ 服务卡片 ============ */
+.cards{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+}
+.card{
+  background:#fff;
+  border:1px solid var(--ya-line);
+  border-radius:14px;
+  padding:22px 20px;
+  transition:.2s;
+}
+.card:hover{
+  transform:translateY(-3px);
+  box-shadow:0 12px 28px rgba(0,0,0,.07);
+  border-color:#ffd0c1;
+}
+.card .ico{
+  width:40px;height:40px;
+  border-radius:11px;
+  background:linear-gradient(135deg,#fff0ea,#ffd9cc);
+  color:var(--ya-red-dark);
+  display:flex;align-items:center;justify-content:center;
+  font-size:17px;font-weight:800;
+  margin-bottom:14px;
+}
+.card h3{
+  font-size:16px;
+  margin-bottom:8px;
+}
+.card p{
+  font-size:13.5px;
+  color:var(--ya-gray);
+}
+.card .tag{
+  display:inline-block;
+  margin-top:12px;
+  font-size:12px;
+  color:var(--ya-red-dark);
+  background:#fff3ee;
+  border-radius:6px;
+  padding:2px 8px;
+}
+
+/* ============ 功能说明 ============ */
+.split{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  align-items:start;
+}
+.article p{
+  color:#3b3b3b;
+  margin-bottom:14px;
+  font-size:14.5px;
+}
+.article h3{
+  font-size:17px;
+  margin:22px 0 10px;
+}
+.article ul{
+  margin:0 0 14px 20px;
+  color:#3b3b3b;
+  font-size:14.5px;
+}
+.article ul li{margin-bottom:7px;}
+.note{
+  background:#fff8f5;
+  border-left:4px solid var(--ya-red);
+  border-radius:0 10px 10px 0;
+  padding:14px 16px;
+  font-size:13.8px;
+  color:#5b3a30;
+  line-height:1.75;
+}
+
+/* ============ 使用步骤 ============ */
+.steps{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+  counter-reset:step;
+}
+.step{
+  background:#fff;
+  border:1px solid var(--ya-line);
+  border-radius:14px;
+  padding:24px 20px 20px;
+  position:relative;
+}
+.step::before{
+  counter-increment:step;
+  content:counter(step,decimal-leading-zero);
+  position:absolute;
+  top:16px;right:18px;
+  font-size:26px;
+  font-weight:800;
+  color:#ffe2d7;
+  line-height:1;
+}
+.step h3{
+  font-size:16px;
+  margin-bottom:9px;
+}
+.step p{
+  font-size:13.6px;
+  color:var(--ya-gray);
+}
+
+/* ============ 对比表格 ============ */
+.table-scroll{overflow-x:auto;}
+table{
+  width:100%;
+  border-collapse:collapse;
+  background:#fff;
+  border:1px solid var(--ya-line);
+  border-radius:12px;
+  overflow:hidden;
+  font-size:13.8px;
+  min-width:620px;
+}
+th,td{
+  padding:13px 15px;
+  text-align:left;
+  border-bottom:1px solid var(--ya-line);
+}
+th{
+  background:#fafafa;
+  font-weight:600;
+  color:#2b2b2b;
+  white-space:nowrap;
+}
+tbody tr:last-child td{border-bottom:0;}
+tbody tr:hover{background:#fffaf8;}
+
+/* ============ 常见问题 ============ */
+.faq{
+  display:grid;
+  gap:12px;
+}
+.faq-item{
+  background:#fff;
+  border:1px solid var(--ya-line);
+  border-radius:12px;
+  overflow:hidden;
+}
+.faq-item summary{
+  cursor:pointer;
+  padding:16px 20px;
+  font-size:15px;
+  font-weight:600;
+  list-style:none;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:14px;
+}
+.faq-item summary::-webkit-details-marker{display:none;}
+.faq-item summary::after{
+  content:"+";
+  color:var(--ya-red);
+  font-size:19px;
+  font-weight:700;
+  flex-shrink:0;
+}
+.faq-item[open] summary::after{content:"–";}
+.faq-item .answer{
+  padding:0 20px 18px;
+  font-size:14px;
+  color:#4a4a4a;
+}
+
+/* ============ 侧栏提示 ============ */
+.aside-box{
+  background:#fff;
+  border:1px solid var(--ya-line);
+  border-radius:14px;
+  padding:20px;
+  margin-bottom:18px;
+}
+.aside-box h3{
+  font-size:15px;
+  margin-bottom:12px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+.aside-box h3::before{
+  content:"";
+  width:4px;height:14px;
+  background:var(--ya-red);
+  border-radius:2px;
+}
+.aside-box ul{
+  list-style:none;
+  font-size:13.6px;
+  color:#4a4a4a;
+}
+.aside-box ul li{
+  padding:8px 0;
+  border-bottom:1px dashed #eee;
+}
+.aside-box ul li:last-child{border-bottom:0;}
+.aside-box ul li strong{color:#222;}
+
+/* ============ 页脚 ============ */
+footer{
+  background:#1c1c1c;
+  color:#b9b9b9;
+  padding:44px 0 26px;
+  font-size:13.5px;
+}
+.foot-grid{
+  display:grid;
+  grid-template-columns:1.4fr 1fr 1fr 1fr;
+  gap:28px;
+  margin-bottom:30px;
+}
+.foot-grid h4{
+  color:#fff;
+  font-size:14.5px;
+  margin-bottom:13px;
+}
+.foot-grid ul{list-style:none;}
+.foot-grid ul li{margin-bottom:8px;}
+.foot-grid a:hover{color:var(--ya-red);}
+.foot-brand p{line-height:1.8;color:#9a9a9a;}
+.foot-bottom{
+  border-top:1px solid #303030;
+  padding-top:18px;
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:10px;
+  color:#8a8a8a;
+  font-size:12.6px;
+}
+
+/* ============ 响应式 ============ */
+@media (max-width:980px){
+  .hero-grid{grid-template-columns:1fr;gap:30px;}
+  .cards{grid-template-columns:repeat(2,1fr);}
+  .steps{grid-template-columns:1fr 1fr;}
+  .split{grid-template-columns:1fr;gap:26px;}
+  .foot-grid{grid-template-columns:1fr 1fr;}
+  .hero h1{font-size:28px;}
+}
+@media (max-width:640px){
+  .topbar-inner{height:auto;flex-direction:column;align-items:flex-start;padding:12px 0;gap:10px;}
+  .nav{gap:2px;}
+  .nav a{padding:7px 10px;font-size:13px;}
+  .hero{padding:36px 0 34px;}
+  .hero h1{font-size:23px;}
+  .search-box button{padding:0 16px;font-size:14px;}
+  .cards{grid-template-columns:1fr;}
+  .steps{grid-template-columns:1fr;}
+  .quick-list{grid-template-columns:1fr;}
+  .section{padding:38px 0;}
+  .section-head h2{font-size:20px;}
+  .foot-grid{grid-template-columns:1fr;}
+  .foot-bottom{flex-direction:column;}
+}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <a class="brand" href="#top">
+      <span class="brand-mark">Y</span>
+      <span>YANDEX入口首页
+        <small>俄罗斯搜索引擎导航</small>
+      </span>
+    </a>
+    <nav class="nav" aria-label="主导航">
+      <a href="#services">核心服务</a>
+      <a href="#guide">使用说明</a>
+      <a href="#steps">访问步骤</a>
+      <a href="#compare">功能对比</a>
+      <a href="#faq">常见问题</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- 首屏 -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <h1>YANDEX入口首页：<em>俄罗斯主流搜索引擎</em>的常用服务导航</h1>
+        <p class="lead">
+          Yandex（Яндекс）是俄罗斯使用范围较广的搜索引擎与互联网服务品牌，除网页搜索外，还提供地图、翻译、邮箱、图片、新闻、云盘等多项服务。本页汇总这些常用服务的入口说明、功能定位与访问注意事项，帮助你快速了解“YANDEX入口首页”到底能做什么。
+        </p>
+        <form class="search-box" onsubmit="return goSearch(event)">
+          <input type="text" id="q" placeholder="输入想了解的服务，如：Yandex 翻译、地图、邮箱" aria-label="搜索服务说明">
+          <button type="submit">查询</button>
+        </form>
+        <div class="search-tips">
+          <span>网页搜索</span>
+          <span>Yandex 地图</span>
+          <span>Yandex 翻译</span>
+          <span>Yandex 邮箱</span>
+          <span>Yandex 图片</span>
+          <span>Yandex 云盘</span>
+        </div>
+      </div>
+
+      <aside class="hero-panel">
+        <h2>常用服务速览</h2>
+        <ul class="quick-list">
+          <li><a href="#services"><span class="dot">搜</span>网页搜索</a></li>
+          <li><a href="#services"><span class="dot">图</span>图片搜索</a></li>
+          <li><a href="#services"><span class="dot">译</span>在线翻译</a></li>
+          <li><a href="#services"><span class="dot">图</span>地图导航</a></li>
+          <li><a href="#services"><span class="dot">邮</span>邮箱服务</a></li>
+          <li><a href="#services"><span class="dot">闻</span>新闻资讯</a></li>
+          <li><a href="#services"><span class="dot">云</span>云盘存储</a></li>
+          <li><a href="#services"><span class="dot">浏</span>浏览器</a></li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 核心服务 -->
+  <section class="section" id="services">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Yandex 首页常见的八类服务</h2>
+        <p>Yandex 并非只有一个搜索框，它更接近一个综合型互联网服务集合。以下分类按使用频率整理，便于从首页快速定位到需要的功能。</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <div class="ico">搜</div>
+          <h3>网页搜索</h3>
+          <p>首页最核心的功能，支持俄语、英语等多种语言检索，具备拼写纠正、站内检索与结果筛选能力。</p>
+          <span class="tag">核心入口</span>
+        </article>
+        <article class="card">
+          <div class="ico">图</div>
+          <h3>图片搜索</h3>
+          <p>可按关键词查找图片，也支持以图搜图，用于识别物体、查找相似图片或核对图片来源。</p>
+          <span class="tag">视觉检索</span>
+        </article>
+        <article class="card">
+          <div class="ico">译</div>
+          <h3>在线翻译</h3>
+          <p>支持文本、网页与部分文档的互译，俄语与中文、英语之间的翻译是常见使用场景。</p>
+          <span class="tag">语言工具</span>
+        </article>
+        <article class="card">
+          <div class="ico">图</div>
+          <h3>地图与导航</h3>
+          <p>提供地图浏览、路线规划、公共交通信息与部分地区的街景查看，适合出行前了解位置。</p>
+          <span class="tag">出行参考</span>
+        </article>
+        <article class="card">
+          <div class="ico">邮</div>
+          <h3>邮箱服务</h3>
+          <p>Yandex Mail 提供邮件收发、垃圾邮件过滤与附件管理，是当地较常见的邮箱选择之一。</p>
+          <span class="tag">账号体系</span>
+        </article>
+        <article class="card">
+          <div class="ico">闻</div>
+          <h3>新闻与资讯</h3>
+          <p>聚合新闻内容并按主题分类，可通过首页资讯区快速浏览当天的主要话题。</p>
+          <span class="tag">信息聚合</span>
+        </article>
+        <article class="card">
+          <div class="ico">云</div>
+          <h3>云盘存储</h3>
+          <p>用于文件上传、同步与分享，常与邮箱、文档等其它服务配合使用。</p>
+          <span class="tag">文件管理</span>
+        </article>
+        <article class="card">
+          <div class="ico">浏</div>
+          <h3>浏览器</h3>
+          <p>Yandex Browser 内置搜索与翻译等能力，是体验其服务生态的一种方式。</p>
+          <span class="tag">客户端</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 使用说明 -->
+  <section class="section alt" id="guide">
+    <div class="wrap split">
+      <div class="article">
+        <div class="section-head">
+          <h2>YANDEX入口首页能解决什么问题</h2>
+        </div>
+        <p>
+          很多人搜索“YANDEX入口首页”，实际需求并不完全相同：有人想找俄罗斯本地的搜索结果，有人需要俄语资料翻译，有人只是想确认某个服务是否由 Yandex 提供。理解这些差异，才能更高效地使用它的各项功能。
+        </p>
+
+        <h3>一、检索俄语或本地化内容</h3>
+        <p>
+          在查找俄语新闻、论文、企业信息或本地生活内容时，使用 Yandex 往往比通用搜索引擎更容易命中本地结果。它的索引对俄语地区网站覆盖较广，对西里尔字母的拼写变体也有一定容错能力。
+        </p>
+
+        <h3>二、作为多语言工具使用</h3>
+        <p>
+          翻译、图片识别和地图是三类与语言无关或弱相关的功能。即使不熟悉俄语，也可以借助翻译功能阅读网页大意，或通过地图确认地理位置与交通线路。
+        </p>
+
+        <h3>三、了解服务边界，避免误用</h3>
+        <ul>
+          <li>搜索结果排序由平台算法决定，不代表对内容的推荐或背书。</li>
+          <li>部分服务在不同地区的可用性、界面语言与功能范围可能存在差异。</li>
+          <li>涉及账号、支付或个人信息的操作，应以官方页面说明为准。</li>
+        </ul>
+
+        <div class="note">
+          提示：本页为服务说明与导航性质的内容页，不提供账号注册、代登录或任何绕过地区限制的操作方法。使用任何在线服务时，请遵守当地法律法规与平台条款。
+        </div>
+      </div>
+
+      <aside>
+        <div class="aside-box">
+          <h3>适合的使用场景</h3>
+          <ul>
+            <li><strong>查俄语资料：</strong>新闻、论文、企业官网</li>
+            <li><strong>做语言转换：</strong>俄语与中英互译</li>
+            <li><strong>看地理位置：</strong>城市、路线与周边信息</li>
+            <li><strong>找图片素材：</strong>关键词检索与以图搜图</li>
+            <li><strong>管理文件邮件：</strong>邮箱与云盘配合</li>
+          </ul>
+        </div>
+        <div class="aside-box">
+          <h3>使用前需要知道</h3>
+          <ul>
+            <li>界面默认多为俄语，可切换语言</li>
+            <li>搜索结果会随地区与时间变化</li>
+            <li>账号相关操作需自行完成验证</li>
+            <li>不要向非官方页面提交密码</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 访问步骤 -->
+  <section class="section" id="steps">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>从首页开始使用的基本步骤</h2>
+        <p>无论是查资料还是使用工具，流程大体一致。以下步骤适用于大多数初次接触 Yandex 的用户。</p>
+      </div>
+      <div class="steps">
+        <article class="step">
+          <h3>进入首页</h3>
+          <p>打开浏览器，在地址栏输入 Yandex 的官方域名并访问，确认页面带有官方标识与搜索框。</p>
+        </article>
+        <article class="step">
+          <h3>选择服务</h3>
+          <p>首页顶部或侧边通常列出搜索、图片、地图、翻译、邮箱等入口，按需求点击进入对应服务。</p>
+        </article>
+        <article class="step">
+          <h3>输入关键词</h3>
+          <p>用俄语或英语描述需求通常更易得到本地结果；不确定拼写时可先输入大致词形，观察是否有纠正提示。</p>
+        </article>
+        <article class="step">
+          <h3>筛选结果</h3>
+          <p>利用结果页的站点、时间、语言等筛选条件缩小范围，必要时切换图片或视频标签页。</p>
+        </article>
+        <article class="step">
+          <h3>使用辅助工具</h3>
+          <p>遇到陌生语言页面，可借助翻译功能理解大意；涉及位置信息时切换到地图查看。</p>
+        </article>
+        <article class="step">
+          <h3>核对信息来源</h3>
+          <p>对关键信息交叉验证，优先参考官方站点、权威机构与可追溯来源，避免直接采信单一结果。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 功能对比 -->
+  <section class="section alt" id="compare">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>主要服务功能对照</h2>
+        <p>下表按用途整理 Yandex 常见服务的定位与典型场景，便于按需选择，而不是在首页反复尝试。</p>
+      </div>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>服务</th>
+              <th>主要用途</th>
+              <th>典型场景</th>
+              <th>使用门槛</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>网页搜索</td>
+              <td>检索网页与本地内容</td>
+              <td>查俄语新闻、企业信息、资料</td>
+              <td>无需账号</td>
+            </tr>
+            <tr>
+              <td>图片搜索</td>
+              <td>关键词找图、以图搜图</td>
+              <td>识别图片、查找相似素材</td>
+              <td>无需账号</td>
+            </tr>
+            <tr>
+              <td>在线翻译</td>
+              <td>文本与网页互译</td>
+              <td>阅读俄语页面、日常翻译</td>
+              <td>无需账号</td>
+            </tr>
+            <tr>
+              <td>地图导航</td>
+              <td>位置查询与路线规划</td>
+              <td>出行前查看路线与周边</td>
+              <td>无需账号</td>
+            </tr>
+            <tr>
+              <td>邮箱服务</td>
+              <td>邮件收发与管理</td>
+              <td>注册账号、日常通信</td>
+              <td>需要注册</td>
+            </tr>
+            <tr>
+              <td>云盘存储</td>
+              <td>文件上传与分享</td>
+              <td>备份资料、共享文件</td>
+              <td>需要账号</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- 常见问题 -->
+  <section class="section" id="faq">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>关于 YANDEX入口首页的常见问题</h2>
+        <p>以下问题来自搜索与使用中的高频疑问，回答以功能说明为主，不涉及任何非官方操作建议。</p>
+      </div>
+      <div class="faq">
+        <details class="faq-item" open>
+          <summary>Yandex 和常见的搜索引擎有什么区别？</summary>
+          <div class="answer">
+            Yandex 起源于俄罗斯，对俄语及当地网站的索引覆盖较广，因此在查找俄语内容和本地信息时通常更贴合需求。通用搜索引擎在多语言与全球内容上更均衡，两者可以按场景配合使用。
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>不会俄语可以使用 Yandex 吗？</summary>
+          <div class="answer">
+            可以。搜索时用英语或中文关键词也能得到结果，只是本地内容命中率可能下降。配合首页提供的翻译功能，阅读俄语页面的难度会明显降低。
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>首页上的服务都需要注册账号吗？</summary>
+          <div class="answer">
+            搜索、图片、翻译、地图等基础功能一般无需登录即可使用；邮箱、云盘等涉及个人数据存储的服务通常需要注册账号。具体以官方页面提示为准。
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>为什么不同时间搜索到的结果不一样？</summary>
+          <div class="answer">
+            搜索结果会受到地区、语言设置、时间以及平台算法更新的影响，属于正常现象。如果需要稳定参考，建议优先查看来源明确、更新时间清晰的页面。
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>使用这些服务需要注意什么？</summary>
+          <div class="answer">
+            建议通过官方域名访问，不在来历不明的页面输入账号密码；对搜索结果中的信息保持核对习惯；涉及支付、证件等敏感操作时，仔细确认页面真实性与条款说明。
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <h4>YANDEX入口首页</h4>
+        <p>围绕俄罗斯主流搜索引擎 Yandex 的常用服务整理导航与使用说明，帮助中文用户理解其搜索、翻译、地图、邮箱等功能的基本定位与适用场景。</p>
+      </div>
+      <div>
+        <h4>服务导航</h4>
+        <ul>
+          <li><a href="#services">网页搜索</a></li>
+          <li><a href="#services">图片搜索</a></li>
+          <li><a href="#services">在线翻译</a></li>
+          <li><a href="#services">地图导航</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>使用帮助</h4>
+        <ul>
+          <li><a href="#guide">功能说明</a></li>
+          <li><a href="#steps">访问步骤</a></li>
+          <li><a href="#compare">服务对照</a></li>
+          <li><a href="#faq">常见问题</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>安全提示</h4>
+        <ul>
+          <li>通过官方域名访问</li>
+          <li>不在陌生页面输入密码</li>
+          <li>关键信息多方核对</li>
+          <li>遵守当地法律法规</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>本页为服务说明与导航内容，与 Yandex 官方无隶属关系，相关名称与商标归其所有者所有。</span>
+      <span>内容仅供信息参考</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+function goSearch(e){
+  e.preventDefault();
+  var input = document.getElementById('q');
+  var val = input.value.trim();
+  if(!val){
+    input.focus();
+    return false;
+  }
+  var target = document.getElementById('services');
+  if(target){
+    target.scrollIntoView({behavior:'smooth'});
+  }
+  return false;
+}
+</script>
+
+</body>
+                                  </html>
